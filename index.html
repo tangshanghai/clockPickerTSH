@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #scrollbox{
+            width: 400px;
+            height: 300px;
+            overflow: auto;
+            background: #cccccc;
+        }
+    </style>
+    <script src="./dist/colorPickerTSH.js"></script>
+</head>
+<body>
+<div id="scrollbox">
+        <input type="text" value="#00ff00" id="inputText"/>
+        <input type="range"  id="inputRange"/>
+        <input type="button" value="设置颜色" id="setBtn" />
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+        <p>asaaaaaaaa</p>
+</div>
+
+<script>
+    var colorpicker = new ColorPickerTSH("#inputText",onChange);
+
+    function onChange(color){
+        // console.log(color);
+        colorpicker.setColor(color.hex,color.alpha)
+    }
+    colorpicker.setColor("#00ff00",0.1);
+
+    // var setBtn = document.querySelector("#setBtn");
+    // var ele_slider = document.querySelector("#inputRange");
+    // var inputtxt = document.querySelector("#inputText");
+    // ele_slider.value = 100;
+    // setBtn.addEventListener("click",clickHandler);
+    // ele_slider.addEventListener("input",inputHandler);
+    // function clickHandler(e){
+    //     colorpicker.setColor(inputtxt.value,ele_slider.value/100);
+    // }
+    // function inputHandler(e){
+    //     colorpicker.setColor(inputtxt.value,ele_slider.value/100);
+    // }
+
+</script>
+</body>
+</html>

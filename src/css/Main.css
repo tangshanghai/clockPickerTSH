@@ -1,0 +1,135 @@
+.cp-app-tsh{
+    width: 210px;
+    height: 210px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px 2px #999999;
+    position: fixed;
+}
+
+.cp-app-tsh .cp-color-area{  
+    position: relative;
+    width: 100%;
+    height: 128px;
+    overflow: hidden;
+    background-image: linear-gradient(to right,#ffffff 0%,#ff0000 100%);
+    
+} 
+.cp-app-tsh .cp-color-area:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%);
+}
+.cp-app-tsh  .cp-color-area .cp-color-thumb{
+    position: absolute;
+    pointer-events: none;
+}
+.cp-app-tsh  .cp-color-area .cp-color-thumb:before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    border: 1px solid #525252;
+    border-radius: 16px;
+    box-shadow: 0 0 1px 1px #ffffff;
+}
+
+.cp-app-tsh .cp-control-col{
+    width: 100%;
+    height: 50px;
+}
+.cp-app-tsh .cp-control-col .cp-color-show{
+    float: left;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cp-app-tsh .cp-control-col .cp-color-show .cp-select-color{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 2px 2px #d1d1d1;
+    background:#eee;
+    background-image: linear-gradient(45deg,rgba(0,0,0,0.25) 25%,transparent 0,transparent 75%,rgba(0,0,0,0.25) 0),linear-gradient(45deg,rgba(0,0,0,0.25) 25%,transparent 0,transparent 75%,rgba(0,0,0,0.25) 0);
+    background-size: 10px 10px;
+    background-position: 0 0 ,15px 15px;
+}
+.cp-app-tsh .cp-control-col .cp-color-show .cp-select-color .cp-select-color-dis{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 40px;
+}
+.cp-app-tsh .cp-control-col .cp-color-slider{
+    width: calc(100% - 50px);
+    height: 100%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.cp-app-tsh .cp-slider-line{
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 16px;
+    overflow: hidden;
+}
+.cp-app-tsh .cp-slider-line input[type=range]{
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+    height: 16px;
+}
+.cp-app-tsh .cp-slider-line .cp-slider-bg{
+    position: absolute;
+    width: 100%;
+    height: 16px;
+}
+.cp-app-tsh .cp-slider-line .cp-slider-thumb{
+    position: absolute;
+    margin: 0 -4px;
+    width: 0px;
+    height: 8px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0) transparent;
+}
+.cp-app-tsh .cp-primary-slider .cp-slider-bg{
+    background-image: linear-gradient(to right,#ff0000 0%,#ff00ff 16.66%,#0000ff 33.33%,#00ffff 50%,#00ff00 66.66%,#ffff00 83.33%,#ff0000 100%);
+}
+.cp-app-tsh .cp-alpha-slider .cp-slider-bg{
+    background-image: linear-gradient(to right,rgba(255,0,0,0) 0%,rgba(255,255,255,1) 100%);
+}
+.cp-app-tsh .cp-alpha-slider{
+    background:#eee;
+    background-image: linear-gradient(45deg,rgba(0,0,0,0.25) 25%,transparent 0,transparent 75%,rgba(0,0,0,0.25) 0),linear-gradient(45deg,rgba(0,0,0,0.25) 25%,transparent 0,transparent 75%,rgba(0,0,0,0.25) 0);
+    background-size: 10px 10px;
+    background-position: 0 0 ,15px 15px;
+}
+.cp-app-tsh .cp-control-text{
+    height: 30px;
+    line-height: 30px;
+}
+
+.cp-app-tsh .cp-control-text .cp-hex-label{
+    width: 50px;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+}
+
+.cp-app-tsh .cp-control-text .cp-hex-input{
+    width: 145px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    text-align: center;
+}
