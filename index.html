@@ -11,14 +11,30 @@
 </head>
 <body>
         <input type="text" value="#00ff00" id="inputText"/>
-
+        <input type="text" value="#00ff00" id="inputText2"/>
 <script>
-    var colorpicker = new ColorPickerTSH("#inputText",onChange);
+    var colorpicker = new ColorPickerTSH("#inputText",onChange,hideBack);
     function onChange(color){
-        console.log(color);
+        //console.log(color);
         //colorpicker.setColor(color.hex,color.alpha)
     }
     colorpicker.setColor("#00ff00",0.1);
+
+    function hideBack(){
+        console.log("隐藏事件")
+    }
+
+
+    var colorpicker2 = new ColorPickerTSH("#inputText2",onChange2,hideBack2);
+    function onChange2(color){
+        //console.log(color);
+        //colorpicker.setColor(color.hex,color.alpha)
+    }
+    colorpicker2.setColor("#00ffff",0.8);
+
+    function hideBack2(){
+        console.log("隐藏事件2")
+    }
 </script>
 </body>
 </html>

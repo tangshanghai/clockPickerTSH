@@ -2,7 +2,7 @@ import Main from "./Main.js";
 import Light from "./Light.js";
 import Utils from "./Utils.js";
 class index{
-    constructor(input,_callBack){
+    constructor(input,_callBack,hideBack){
         // console.log("成功了");
         
 
@@ -28,9 +28,9 @@ class index{
         this.main.root.style.top = (pos.top+35)+"px";
         
 
-        document.addEventListener("mousedown",mousedownHandler);
-        document.addEventListener("mousewheel",mousedownHandler);
-        document.addEventListener("DOMMouseScroll",mousedownHandler);
+        // document.addEventListener("mousedown",mousedownHandler);
+        // document.addEventListener("mousewheel",mousedownHandler);
+        // document.addEventListener("DOMMouseScroll",mousedownHandler);
 
         let root = this.main.root;
         function mousedownHandler(event){
@@ -39,6 +39,12 @@ class index{
                 return;
             }
             root.style.display = "none";
+            document.removeEventListener("mousedown",mousedownHandler);
+            document.removeEventListener("mousewheel",mousedownHandler);
+            document.removeEventListener("DOMMouseScroll",mousedownHandler);
+            if(hideBack){
+                hideBack();
+            }
         }
 
         function clickHandler(){
@@ -47,6 +53,10 @@ class index{
             this.main.root.style.left = pos.left+"px";
             this.main.root.style.top = (pos.top+35)+"px";
             this.main.root.style.zIndex = Utils.getMaxZindex();
+
+            document.addEventListener("mousedown",mousedownHandler);
+            document.addEventListener("mousewheel",mousedownHandler);
+            document.addEventListener("DOMMouseScroll",mousedownHandler);
         }
 
         function colorChange(color){
