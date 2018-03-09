@@ -7,6 +7,10 @@
     position: fixed;
 }
 
+.cp-app-tsh *{
+    box-sizing: content-box;
+}
+
 .cp-app-tsh .cp-color-area{  
     position: relative;
     width: 100%;
