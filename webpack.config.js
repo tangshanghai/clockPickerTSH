@@ -10,7 +10,11 @@ module.exports = {
     },
     output: {
         path: path.resolve("./dist"),
-        filename: "ColorPickerTSH.js"
+        filename: "ColorPickerTSH.js",
+        library: 'ColorPickerTSH',
+        libraryExport: "default",
+        libraryTarget: 'umd',
+        umdNamedDefine: true
     },
     module: {
         loaders: [

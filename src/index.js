@@ -4,9 +4,11 @@ import Utils from "./Utils.js";
 class index{
     constructor(input,_callBack,hideBack){
         // console.log("成功了");
-        
-
-        let inputNode = document.querySelector(input);
+        let inputNode = input;
+        if(typeof input === 'string'){
+            inputNode = document.querySelector(input);
+        }
+        // let inputNode = document.querySelector(input);
         let light = new Light(clickHandler.bind(this));
         this.light = light;
         this.main = new Main(colorChange);
@@ -82,8 +84,9 @@ class index{
         return this.main.getColor();
     }
 }
-window.ColorPickerTSH = index;
-// export default index;
-if(typeof module === "object" && module && typeof module.exports === "object"){
-    module.exports = index;
-}
+export default index;
+// window.ColorPickerTSH = index;
+// // export default index;
+// if(typeof module === "object" && module && typeof module.exports === "object"){
+//     module.exports = index;
+// }
