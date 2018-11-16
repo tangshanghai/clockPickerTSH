@@ -52,8 +52,15 @@ class index{
         function clickHandler(){
             this.main.root.style.display = "block";
             let pos = light.root.getBoundingClientRect();
-            this.main.root.style.left = pos.left+"px";
-            this.main.root.style.top = (pos.top+35)+"px";
+            let x = pos.left,y=pos.top+35,limitW = document.body.clientWidth,limitH=document.body.clientHeight;
+            if(x+210 > limitW){
+                x = x-210+52;
+            }
+            if(y+210 > limitH){
+                y = y-210-35;
+            }
+            this.main.root.style.left = x+"px";
+            this.main.root.style.top = y+"px";
             this.main.root.style.zIndex = Utils.getMaxZindex();
 
             document.addEventListener("mousedown",mousedownHandler);
