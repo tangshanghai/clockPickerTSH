@@ -10,18 +10,21 @@
             height: 100%;
         }
     </style>
-    <script src="./dist/colorPickerTSH.js"></script>
+    <!-- <script src="./dist/colorPickerTSH.js"></script> -->
 </head>
 <body>
         <input type="text" value="#00ff00" id="inputText"/>
         <input type="text" value="#00ff00" id="inputText2"/>
+
+</body>
+
 <script>
     var colorpicker = new ColorPickerTSH("#inputText",onChange,hideBack);
     function onChange(color){
         //console.log(color);
         //colorpicker.setColor(color.hex,color.alpha)
     }
-    colorpicker.setColor("#00ff00",0.1);
+    colorpicker.setColor("#ffffff",1);
 
     function hideBack(){
         console.log("隐藏事件")
@@ -39,5 +42,4 @@
         console.log("隐藏事件2")
     }
 </script>
-</body>
 </html>
